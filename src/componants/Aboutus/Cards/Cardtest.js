@@ -35,7 +35,7 @@ class AboutUs extends Component {
       {
         "name": "Mahmoud Abubaker",
         "img": pic1,
-        "githup": `https://github.com/Sukina12`,
+        "githup": `https://github.com/MahmoudAbubaker9`,
         "Linkedin": 'https://www.linkedin.com/in/mahmoudabubaker/'
       }
 
