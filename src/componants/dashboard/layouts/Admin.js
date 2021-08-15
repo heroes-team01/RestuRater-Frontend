@@ -18,14 +18,14 @@
 import React from "react";
 import { useLocation, Route, Switch } from "react-router-dom";
 
-import AdminNavbar from "/home/mahmoudabubaker/Project/resturater/src/componants/dashboard/components/Navbars/AdminNavbar.js";
-import Footer from "/home/mahmoudabubaker/Project/resturater/src/componants/dashboard/components/Footer/Footer.js";
+import AdminNavbar from "../components/Navbars/AdminNavbar";
+import Footer from "../components/Footer/Footer";
 import Sidebar from "../components/Sidebar/Sidebar";
 // import FixedPlugin from "/home/mahmoudabubaker/Project/resturater/src/componants/dashboard/components/FixedPlugin/FixedPlugin.js";
 
 import routes from "../routes";
 
-import sidebarImage from "/home/mahmoudabubaker/Project/resturater/src/componants/dashboard/_HYHtD8F.jpg";
+import sidebarImage from "../_HYHtD8F.jpg";
 
 function Admin() {
   const [image] = React.useState(sidebarImage);

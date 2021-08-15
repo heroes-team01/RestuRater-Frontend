@@ -1,0 +1,167 @@
+[
+    {
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVdHU8FzZtLLpKtA03csNku2hVk1dpXgXB7g&usqp=CAU",
+      "title": "Mission Chinese Food",
+      "address": "171 E Broadway, New York, NY 10002",
+      "description": "Mission Chinese Food has grown up from its scrappy Orchard Street days into a big, two story restaurant equipped with a pizza oven, a prime rib cart, and a much broader menu. Yes, it still has all the hits — the kung pao pastrami, the thrice cooked bacon —but chef/proprietor Danny Bowien and executive chef Angela Dimayuga have also added a raw bar, two generous family-style set menus, and showstoppers like duck baked in clay. And you can still get a lot of food without breaking the bank.",
+      "type":"Asian",
+      "id":1
+    },
+    {
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVdHU8FzZtLLpKtA03csNku2hVk1dpXgXB7g&usqp=CAU",
+        "title": "Eostrix Gastro Pub",
+        "address": "Abu Salma Al-khelal Street, Amman 11194 Jordan",
+        "description": "Here’s how you pronounce our title: Yo – Strix. Now memorize it, because you’ll be saying it quite often. We called ourselves after a lucky creature of the night; a breed of owls that are known to be a good luck charm in ancient civilizations. ",
+        "type":"Italian",
+        "id":2
+
+      }
+      ,
+    {
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVdHU8FzZtLLpKtA03csNku2hVk1dpXgXB7g&usqp=CAU",
+        "title": " Pizza Nina",
+        "address": "Abu Salma Al-khelal Street, Amman 11194 Jordan",
+        "description": "Pizza Nina is an artisan sourdough Sicilian pan pizzeria. Our fresh ingredients are hand picked and delivered daily to ensure the highest quality product. We serve one size pizza 30X30 CM that is good for 2-3 people.",
+        "type":"Italian",
+        "id":2
+      }
+      ,
+    {
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVdHU8FzZtLLpKtA03csNku2hVk1dpXgXB7g&usqp=CAU",
+        "title": "Gusto Italian Restaurant",
+        "address": "Black Iris Street Amman Rotana Hotel, Amman 11190 Jordan",
+        "description": "A nicely designed Italian restaurant located in Rotana Hotel-Abdali. It is built in a curved way to go with hotel’s design, and adorned with jars of vegetable picked and huge Parmesan cheese wheels. ",
+        "type":"Italian",
+        "id":2
+      }
+      ,
+    {
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVdHU8FzZtLLpKtA03csNku2hVk1dpXgXB7g&usqp=CAU",
+        "title": "Casa Enrique",
+        "address": "5-48 49th Ave, Queens, NY 11101",
+        "description": "The hype was real. Please go. Get the ceviche. And the tres leches. You're welcome",
+        "type":"Italian"
+      }
+      ,
+    {
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVdHU8FzZtLLpKtA03csNku2hVk1dpXgXB7g&usqp=CAU",
+        "title": "Casa Enrique",
+        "address": "5-48 49th Ave, Queens, NY 11101",
+        "description": "Mission india Food has grown up from its scrappy Orchard Street days into a big, two story restaurant equipped with a pizza oven, a prime rib cart, and a much broader menu. Yes, it still has all the hits — the kung pao pastrami, the thrice cooked bacon —but chef/proprietor Danny Bowien and executive chef Angela Dimayuga have also added a raw bar, two generous family-style set menus, and showstoppers like duck baked in clay. And you can still get a lot of food without breaking the bank",
+        "type":"Indian",
+        "id":3
+      }
+      ,
+    {
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVdHU8FzZtLLpKtA03csNku2hVk1dpXgXB7g&usqp=CAU",
+        "title": "Casa Enrique",
+        "address": "5-48 49th Ave, Queens, NY 11101",
+        "description": "Head to this laid-back Long Island City restaurant for beef tongue tacos, chicken smothered in a heady mole sauce, and a monster crab tostada. New York's only Michelin-starred Mexican restaurant is an especially cool choice for lunch during the week or drinks after work. Eater critic Ryan Sutton awarded this restaurant two stars.",
+        "type":"Mexican",
+        "id":4
+      }
+      ,
+      {
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVdHU8FzZtLLpKtA03csNku2hVk1dpXgXB7g&usqp=CAU",
+        "title": "Casa Enrique",
+        "address": "5-48 49th Ave, Queens, NY 11101",
+        "description": "Head to this laid-back Long Island City restaurant for beef tongue tacos, chicken smothered in a heady mole sauce, and a monster crab tostada. New York's only Michelin-starred Mexican restaurant is an especially cool choice for lunch during the week or drinks after work. Eater critic Ryan Sutton awarded this restaurant two stars.",
+        "type":"Mexican",
+        "id":4
+      },
+      {
+          "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVdHU8FzZtLLpKtA03csNku2hVk1dpXgXB7g&usqp=CAU",
+          "title": "Mission Chinese Food",
+          "address": "171 E Broadway, New York, NY 10002",
+          "description": "Mission Chinese Food has grown up from its scrappy Orchard Street days into a big, two story restaurant equipped with a pizza oven, a prime rib cart, and a much broader menu. Yes, it still has all the hits — the kung pao pastrami, the thrice cooked bacon —but chef/proprietor Danny Bowien and executive chef Angela Dimayuga have also added a raw bar, two generous family-style set menus, and showstoppers like duck baked in clay. And you can still get a lot of food without breaking the bank.",
+          "type":"Middle East",
+          "id":5
+        },
+        {
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVdHU8FzZtLLpKtA03csNku2hVk1dpXgXB7g&usqp=CAU",
+            "title": "Mission Chinese Food",
+            "address": "171 E Broadway, New York, NY 10002",
+            "description": "Mission Chinese Food has grown up from its scrappy Orchard Street days into a big, two story restaurant equipped with a pizza oven, a prime rib cart, and a much broader menu. Yes, it still has all the hits — the kung pao pastrami, the thrice cooked bacon —but chef/proprietor Danny Bowien and executive chef Angela Dimayuga have also added a raw bar, two generous family-style set menus, and showstoppers like duck baked in clay. And you can still get a lot of food without breaking the bank.",
+            "type":"Middle East",
+            "id":5
+          }
+          ,
+          {
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVdHU8FzZtLLpKtA03csNku2hVk1dpXgXB7g&usqp=CAU",
+            "title": "Emily",
+            "address": "919 Fulton St, Brooklyn, NY 11238",
+            "description": "Mission Chinese Food has grown up from its scrappy Orchard Street days into a big, two story restaurant equipped with a pizza oven, a prime rib cart, and a much broader menu. Yes, it still has all the hits — the kung pao pastrami, the thrice cooked bacon —but chef/proprietor Danny Bowien and executive chef Angela Dimayuga have also added a raw bar, two generous family-style set menus, and showstoppers like duck baked in clay. And you can still get a lot of food without breaking the bank.",
+            "type":  "Pizza",
+            "id":6
+          },
+          
+     {
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVdHU8FzZtLLpKtA03csNku2hVk1dpXgXB7g&usqp=CAU",
+        "title": "Emily",
+        "address": "919 Fulton St, Brooklyn, NY 11238",
+        "description": "Five star food, two star atmosphere. I would definitely get takeout from this place - but dont think I have the energy to deal with the hipster ridiculousness again. By the time we left the wait was two hours long.",
+         "type": "Pizza",
+         "id":6
+      },{
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVdHU8FzZtLLpKtA03csNku2hVk1dpXgXB7g&usqp=CAU",
+        "title": "Kang Ho Dong Baekjeong",
+              "address": "1 E 32nd St, New York, NY 10016",
+    "description": "The tables at this 32nd Street favorite are outfitted with grills for cooking short ribs, brisket, beef tongue, rib eye, and pork jowl. The banchan plates are uniformly good, and Deuki Hong’s menu also includes winning dishes like stir-fried squid noodles, kimchi stew, and seafood pancakes. If it’s available, make sure to order the kimchi and rice “lunchbox.” Baekjeong is a great place for large groups and birthday parties.",
+  "type": "Asian",
+  "id":1
+      },
+  {
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVdHU8FzZtLLpKtA03csNku2hVk1dpXgXB7g&usqp=CAU",
+       "title": "Katz's Delicatessen",
+        "address": "205 E Houston St, New York, NY 10002",
+    "description": "In 127 years, little has changed at Katz's. It remains one of New York's — and the country's — essential Jewish delicatessens. Every inch of the massive Lower East Side space smells intensely of pastrami and rye loaves. The sandwiches are massive, so they are best when shared. Order at the counter, and don't forget to tip your slicer — your sandwich will be better for it.",
+  "type": "American",
+  "id":7
+      },
+  {
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVdHU8FzZtLLpKtA03csNku2hVk1dpXgXB7g&usqp=CAU",
+       "title": "Katz's Delicatessen",
+        "address": "205 E Houston St, New York, NY 10002",
+        "type": "American",
+        "id":7,
+  "description": "If I lived in NY and got diabetes from eating here every single time I ate, I would do it over and over and over again just for that first bite. These guys know how to make a sandwich. The heart attack comes free of charge! Came by while I was visiting NYC. First pit-stop when I come back :)!"
+      },
+  {
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVdHU8FzZtLLpKtA03csNku2hVk1dpXgXB7g&usqp=CAU",
+      "title": "Roberta's Pizza",
+        "address": "261 Moore St, Brooklyn, NY 11206",
+        "type": "Pizza",
+            "description": "Roberta's is the epicenter of the modern Brooklyn food scene.The pizzas are fantastic, but the restaurant really flexes its muscles with the vegetable dishes. In addition to the pies, consider ordering the radishes, the romaine salad, the roasted beets, and some of the charcuterie."
+      },
+  {
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVdHU8FzZtLLpKtA03csNku2hVk1dpXgXB7g&usqp=CAU",
+     "title": "Hometown BBQ",
+        "address": "454 Van Brunt St, Brooklyn, NY 11231",
+        "type": "American",
+        "id":7,
+            "description": "Barbecue aficionados agree that Billy Durney is cooking up some of the best Texas-style barbecue in the city. Straightforward classics like smoked brisket and baby back ribs are always a strong choice, but there are also options like pork belly tacos and a lamb belly banh mi. The space is sprawling in a way that feels like the real deal, and Durney himself can usually be found working the room, and keeping a watchful eye on the smoking meats. It's counter service only, and there's often a line, but for the scene and certainly for the meat, it's easily worth the trip to Red Hook."
+      },
+  {
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVdHU8FzZtLLpKtA03csNku2hVk1dpXgXB7g&usqp=CAU",
+      "title": "Superiority Burger",
+        "address": "430 E 9th St, New York, NY 10009",
+        "type": "American",
+        "id":7,
+            "description": "Brooks Headley’s tiny East Village cafe is so much more than a veggie burger spot — it's one of the best bang-for-your-buck restaurants in Lower Manhattan. Headley and his crew turn seasonal vegetables into delectable salads and riffs on American comfort food favorites. The specials menu changes daily, and the rest of the menu is constantly evolving. You can get a lot of food to eat here for under $15 per person."
+      },
+  {
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVdHU8FzZtLLpKtA03csNku2hVk1dpXgXB7g&usqp=CAU",
+      "title": "The Dutch",
+        "address": "131 Sullivan St, New York, NY 10012",
+        "type": "American",
+        "id":7,
+            "description": "Over the last five years, The Dutch has turned into the quintessential American restaurant that chef Andrew Carmellini and partners Josh Pickard and Luke Ostrom sought to evoke when it first opened. It’s a great choice when you’re craving a steak, a burger, or oysters, and the menu always includes plentiful seafood options as well as pastas. The Dutch is now an indelible part of the Soho landscape."
+          },{
+   "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVdHU8FzZtLLpKtA03csNku2hVk1dpXgXB7g&usqp=CAU",
+  "title": "Mu Ramen",
+        "address": "1209 Jackson Ave, Queens, NY 11101",
+        "type": "Asian",
+        "id":1,
+            "description": "Joshua Smookler’s two-year-old ramen shop serves one of the best tonkotsu broths around. Beyond ramen, Mu also offers some high minded plates, like foie gras-stuffed chicken wings, as well as dry-aged Japanese Wagyu beef specials. Mu is just 10 short minutes away from Midtown via the 7-train."
+  }
+  ]

@@ -21,15 +21,15 @@
     transition: all 0.2s ease-in-out;
   }
   
-  .card-img-top:hover {
+   /* .card-img-top:hover {
     transform: scale(1.8);
-  }
+  } */
 
-  .card-title {
+  /* .card-title {
       background-color: beige;
   }
 
   .card-body {
       height: 150px;
-  }
+  } */
   
