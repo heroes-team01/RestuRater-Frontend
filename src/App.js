@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
-import Aboutus from './componants/Aboutus/Aboutus';
 import Indexview from './componants/dashboard/Indexview';
+import Cards from './componants/Aboutus/Cards/Cards';
 import { BrowserRouter as Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import axios from 'axios';
@@ -13,7 +13,7 @@ function App() {
       <Route>
       <Switch>
       <Route path='/Aboutus'>
-        <Aboutus />
+        <Cards />
       </Route>
       <Route path='/admin'>
       <Indexview />
