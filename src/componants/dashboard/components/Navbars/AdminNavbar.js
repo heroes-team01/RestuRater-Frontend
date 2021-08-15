@@ -76,11 +76,11 @@ function Header() {
                 onClick={(e) => e.preventDefault()}
                 className="m-0"
               >
-                <i className="nc-icon nc-palette"></i>
+                {/* <i className="nc-icon nc-palette"></i> */}
                 <span className="d-lg-none ml-1">Dashboard</span>
               </Nav.Link>
             </Nav.Item>
-            <Dropdown as={Nav.Item}>
+            {/* <Dropdown as={Nav.Item}>
               <Dropdown.Toggle
                 as={Nav.Link}
                 data-toggle="dropdown"
@@ -124,7 +124,7 @@ function Header() {
                   Another notification
                 </Dropdown.Item>
               </Dropdown.Menu>
-            </Dropdown>
+            </Dropdown> */}
             <Nav.Item>
               <Nav.Link
                 className="m-0"

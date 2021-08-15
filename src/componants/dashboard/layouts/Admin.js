@@ -21,16 +21,16 @@ import { useLocation, Route, Switch } from "react-router-dom";
 import AdminNavbar from "/home/mahmoudabubaker/Project/resturater/src/componants/dashboard/components/Navbars/AdminNavbar.js";
 import Footer from "/home/mahmoudabubaker/Project/resturater/src/componants/dashboard/components/Footer/Footer.js";
 import Sidebar from "../components/Sidebar/Sidebar";
-import FixedPlugin from "/home/mahmoudabubaker/Project/resturater/src/componants/dashboard/components/FixedPlugin/FixedPlugin.js";
+// import FixedPlugin from "/home/mahmoudabubaker/Project/resturater/src/componants/dashboard/components/FixedPlugin/FixedPlugin.js";
 
 import routes from "../routes";
 
 import sidebarImage from "/home/mahmoudabubaker/Project/resturater/src/componants/dashboard/_HYHtD8F.jpg";
 
 function Admin() {
-  const [image, setImage] = React.useState(sidebarImage);
-  const [color, setColor] = React.useState("black");
-  const [hasImage, setHasImage] = React.useState(true);
+  const [image] = React.useState(sidebarImage);
+  const [color] = React.useState("black");
+  const [hasImage] = React.useState(true);
   const location = useLocation();
   const mainPanel = React.useRef(null);
   const getRoutes = (routes) => {
@@ -73,14 +73,14 @@ function Admin() {
           <Footer />
         </div>
       </div>
-      <FixedPlugin
+      {/* <FixedPlugin
         hasImage={hasImage}
         setHasImage={() => setHasImage(!hasImage)}
         color={color}
         setColor={(color) => setColor(color)}
         image={image}
         setImage={(image) => setImage(image)}
-      />
+      /> */}
     </>
   );
 }
