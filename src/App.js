@@ -2,11 +2,12 @@
 import React from "react";
 import './App.css';
 import Indexview from './componants/dashboard/Indexview';
-import Cards from './componants/Aboutus/Cards/Cards';
+// import Cards from './componants/Aboutus/Cards/Cards';
 import { BrowserRouter as Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import rest from './componants/Restrunt.json';
 import Main from "./componants/Main";
+import Cardtest from './componants/Aboutus/Cards/Cardtest';
 // import axios from 'axios';
 
 class App extends React.Component {
@@ -30,7 +31,11 @@ class App extends React.Component {
       <Route>
       <Switch>
       <Route path='/Aboutus'>
-        <Cards />
+        <Cardtest />
+
+        {/* <Cards /> */}
+        
+
       </Route>
       <Route path='/admin'>
       <Indexview />
