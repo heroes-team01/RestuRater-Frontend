@@ -4,7 +4,7 @@
   }
   
   .card-body {
-    padding: 2rem 0 !important;
+    padding: 1rem 0 !important;
   }
   
   .card-text {
@@ -23,5 +23,13 @@
   
   .card-img-top:hover {
     transform: scale(1.8);
+  }
+
+  .card-title {
+      background-color: beige;
+  }
+
+  .card-body {
+      height: 150px;
   }
   
