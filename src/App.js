@@ -1,22 +1,84 @@
+<<<<<<< HEAD
 
+=======
+// import logo from './logo.svg';
+import React from "react";
+>>>>>>> a0c4daabb0e8cbc957cb756ab8cbdf3484f48d90
 import './App.css';
 import Indexview from './componants/dashboard/Indexview';
-import Cards from './componants/Aboutus/Cards/Cards';
+// import Cards from './componants/Aboutus/Cards/Cards';
 import { BrowserRouter as Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+<<<<<<< HEAD
 import React from "react";
+=======
+import rest from './componants/Restrunt.json';
+import Main from "./componants/Main";
+import Home from "./componants/home/home";
+import Cardtest from './componants/Aboutus/Cards/Cardtest';
+import ModelCard from "./componants/model";
+>>>>>>> a0c4daabb0e8cbc957cb756ab8cbdf3484f48d90
 
-function App() {
+import LoginButton from "./componants/login";
+
+import { withAuth0 } from '@auth0/auth0-react';
+import LogoutButton from "./componants/logout";
+
+
+// import axios from 'axios
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { 
+    data: rest ,
+    showingData: {}
+    }
+  }
+  showCard = (values) => {
+
+    this.setState({
+    selected:true,
+    showingData:values,
+  });
+  }
+
+  hideCard = () => {
+    this.setState({
+    selected: false});
+}
+
+
+  filteredData = (data) =>{
+    this.setState({data });
+  }
+
+
+  render() {
   return (
 
     <div>
       <Route>
       <Switch>
       <Route path='/Aboutus'>
-        <Cards />
+        <Cardtest />
+
+        {/* <Cards /> */}
+        
+
       </Route>
       <Route path='/admin'>
       <Indexview />
+      </Route>
+      <Route path='/category'>
+      <Main showCard={this.showCard} restData={this.state.data} filteredData={this.filteredData}/>
+      <ModelCard selected={this.state.selected} showingData={this.state.showingData} hideCard={this.hideCard} />
+      </Route>
+      <Route path='/'>
+      {this.props.auth0.isAuthenticated ? LogoutButton: <LoginButton />}
+
+<LogoutButton/>
+      <Home/>
       </Route>
       </Switch>
       </Route>
@@ -24,5 +86,6 @@ function App() {
   
   );
 }
+}
 
-export default App;
+export default withAuth0(App);
