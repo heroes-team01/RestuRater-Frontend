@@ -7,12 +7,18 @@ import pic2 from '../img/22222.jpg'
 import pic3 from '../img/33333.jpg'
 import pic4 from '../img/4444444.jpg'
 
+import Header from "../../header";
+
 // import { Link } from "react-router-dom";
 
 class AboutUs extends Component {
 
 
   render() {
+
+
+
+
     const info = [
       {
         "name": "Raghad-Abdelghani",
@@ -41,46 +47,49 @@ class AboutUs extends Component {
 
     ]
 
+     
 
     const card = info.map((item) => {
-      return (
-        <>
-          <div className="card-container">
-            {/* <span className="pro">PRO</span> */}
-            <img className="round" src={item.img} alt="user" style={{ width: '10rem', height: '10rem' }} />
-            {/* <h3></h3> */}
-            <h6>{item.name}</h6>
-            <p>Junior Full-Stack Developer</p>
-            <div className="buttons">
+        return (
+          <>
+            <div className="card-container">
+              {/* <span className="pro">PRO</span> */}
+              <img className="round" src={item.img} alt="user" style={{ width: '10rem', height: '10rem' }} />
+              {/* <h3></h3> */}
+              <h6>{item.name}</h6>
+              <p>Junior Full-Stack Developer</p>
+              <div className="buttons">
 
-              <button className="primary ">
-                <a href={item.githup}>GitHub</a>
-              </button>
-              <button className="primary ghost">
-                <a href={item.portfolio}>Linkedin</a>
+                <button className="primary ">
+                  <a href={item.githup}>GitHub</a>
+                </button>
+                <button className="primary ghost">
+                  <a href={item.portfolio}>Linkedin</a>
 
-              </button>
+                </button>
+              </div>
+              <div className="skills">
+                <h6>Skills</h6>
+                <ul>
+                  <li>FrontEnd and BackEnd Development</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>React</li>
+                  <li>Node</li>
+                </ul>
+              </div>
             </div>
-            <div className="skills">
-              <h6>Skills</h6>
-              <ul>
-                <li>FrontEnd and BackEnd Development</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Node</li>
-              </ul>
-            </div>
-          </div>
 
 
 
-        </>);
-    });
+          </>);
+      });
 
     return (
+      
       <>
+      < Header />
         <div className='aboutTeamMembers'><h1 className="TeamMembers">Meet Our Team</h1></div>
         <div className="all-cards">
 
