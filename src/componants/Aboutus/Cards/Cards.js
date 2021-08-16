@@ -6,6 +6,13 @@ import image2 from '../img/22222.jpg'
 import image3 from '../img/33333.jpg'
 import image4 from '../img/4444444.jpg'
 
+
+
+
+
+
+
+
 const cards = [
   {
     id: 1,

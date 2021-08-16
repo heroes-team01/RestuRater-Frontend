@@ -3,13 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@auth0/auth0-react": "^1.6.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
-<<<<<<< HEAD
-=======
     "axios": "^0.21.1",
->>>>>>> 43c41f42904c550a4d89aa92d043a5383f8c101e
     "bootstrap": "^5.1.0",
     "chartist": "^0.11.4",
     "mdbreact": "^5.1.0",
