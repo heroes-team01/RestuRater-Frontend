@@ -27,12 +27,12 @@ class FormF extends  React.Component{
         return(
             <>
 
-                <Form >
+                <Form className='form'>
 
 
                     <Form.Group aria-label="Default select example">
-                        <Form.Label>Choose type of Restrunt you want:</Form.Label>
-                        <Form.Control as='select' onChange={this.dataFilter}>
+                        <Form.Label className='para'>Choose type of Restrunt you want:</Form.Label>
+                        <Form.Control className='formColor' as='select' onChange={this.dataFilter}>
                         <option>All</option>
                         <option value="1">Asian</option>
                         <option value="2">Italian</option>
@@ -45,7 +45,7 @@ class FormF extends  React.Component{
                     </Form.Group>
 
                 </Form>
-
+            
 
 
             </>

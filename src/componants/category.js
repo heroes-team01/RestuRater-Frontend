@@ -13,30 +13,38 @@ constructor(props) {
     }
 }
 
-increaseNoOfVotes = () => {
-   
-}
 
+
+updateCardState = () => {
+    let info={ title:this.props.title,
+    description:this.props.description,
+    image_url :this.props.image_url,
+    type :this.props.type
+    
+    }
+
+    this.props.showCard(info);
+}
 
 render() {
     return (
         <div>
-        <Card style={{ width: '18rem' , height: "350px" , padding: "10px" , float: "left", margin: "10px" }}>
-            <Card.Img variant="top" src={this.props.image_url} alt={this.props.title}/>
+            
+        <Card className='cardColor' style={{ width: '18rem' , height: "450px" , padding: "10px" , float: "left", margin: "20px" }}>
+            <Card.Img className='cardPic' variant="top" src={this.props.image_url} alt={this.props.title}/>
             <Card.Body >
-                <Card.Title>
+                <Card.Title id='title' className='info'>
                 {this.props.title}
                     
                     </Card.Title>
                
-                <h6>
-               Adress : {this.props.address}
-                   </h6> 
-               <h6>
-               type : {this.props.type}
-                   </h6> 
-              
-                <Button onClick={this.increaseNoOfVotes}  variant="primary">more details</Button>
+                    <Card.Text>
+
+               Address : {this.props.address}<br></br>
+               Type : {this.props.type}
+               </Card.Text>
+
+                <Button className='info' onClick={this.updateCardState}  variant="primary">more details</Button>
             </Card.Body>
         </Card>
         </div>
