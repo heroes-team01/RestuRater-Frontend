@@ -13,7 +13,6 @@ class Main extends React.Component{
          { this.props.restData.map((item)=>{
                 return (
                     <Category title={item.title} address={item.address} type={item.type} image_url={item.image_url}
-                    type={item.type}
                    ></Category>
                    
                    )
