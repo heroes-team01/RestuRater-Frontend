@@ -8,10 +8,21 @@ import {
   Row,
   Col,
 } from "react-bootstrap";
-// import { Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import Restrunt from '../../Restrunt.json';
 
+
 function TableList() {
+
+//   AddCardState = () => {
+//     let info={ title:this.props.title,
+//     description:this.props.description,
+//     image_url :this.props.image_url,
+//     type :this.props.type
+//     }
+
+//     this.props.showCard(info);
+// }
 
   return (
     <>
@@ -21,9 +32,8 @@ function TableList() {
             <Card className="strpied-tabled-with-hover">
               <Card.Header>
                 <Card.Title as="h4">Restaurants List</Card.Title>
-                {/* <Button variant="primary" onClick={handleShow}>
-                  Launch Form modal
-                </Button> */}
+                <Button className='info'  variant="primary">Add Restaurants</Button>
+
               </Card.Header>
               <Card.Body className="table-full-width table-responsive px-0">
                 <Table className="table-hover table-striped">

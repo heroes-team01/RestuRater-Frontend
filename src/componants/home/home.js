@@ -15,7 +15,7 @@ import chineese from './img/chineese.jpg'
 import eastern from './img/eastern.jpg'
 import indian from './img/indian.jpg'
 import welcome from './img/pasta.png'
-import logo from './img/logo.png'
+// import logo from './img/logo.png'
 
 export class Home extends Component {
     render() {
