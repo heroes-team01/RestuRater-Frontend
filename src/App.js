@@ -10,7 +10,7 @@ import Main from "./componants/Main";
 import Home from "./componants/home/home";
 import Cardtest from './componants/Aboutus/Cards/Cardtest';
 import ModelCard from "./componants/model";
-
+import Profile from  "./componants/profile";
 import { withAuth0 } from '@auth0/auth0-react';
 
 
@@ -44,6 +44,8 @@ class App extends React.Component {
 
 
   render() {
+    const { isAuthenticated } = this.props.auth0;
+
   return (
 
     <div>
@@ -64,10 +66,23 @@ class App extends React.Component {
       <ModelCard selected={this.state.selected} showingData={this.state.showingData} hideCard={this.hideCard} />
       </Route>
       <Route path='/'>
-
-
       <Home/>
       </Route>
+      {/* <Route path="/profile">
+
+    
+              {
+                isAuthenticated &&
+                <Profile />
+
+              }
+                              </Route> */}
+                              <Route exact path="/">
+              {isAuthenticated ? <Profile /> : "hiiiiiii"}
+            </Route>
+
+
+              {/* <Profile /> */}
       </Switch>
       </Route>
     </div>
