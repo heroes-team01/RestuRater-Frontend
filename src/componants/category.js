@@ -30,7 +30,7 @@ render() {
     return (
         <div>
             
-        <Card className='cardColor' style={{ width: '18rem' , height: "450px" , padding: "10px" , float: "left", margin: "20px" }}>
+        <Card className='cardColor' style={{ width: '18rem' , height: "450px" , padding: "10px" , float: "left", margin: "25px" }}>
             <Card.Img className='cardPic' variant="top" src={this.props.image_url} alt={this.props.title}/>
             <Card.Body >
                 <Card.Title id='title' className='info'>
