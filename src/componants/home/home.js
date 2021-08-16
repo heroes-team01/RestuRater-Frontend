@@ -22,6 +22,7 @@ import indian from './img/indian.jpg'
 import welcome from './img/pasta.png'
 import Logo from './img/logo.png'
 
+
 export class Home extends Component {
     render() {
       const { isAuthenticated } = this.props.auth0;
