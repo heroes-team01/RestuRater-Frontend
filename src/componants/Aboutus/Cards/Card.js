@@ -3,8 +3,16 @@ import PropTypes from "prop-types";
 
 import "./card.css";
 
+
+
+
+
+
 function Card({ imageSource, title, text }) {
   return (
+    <div>
+   
+
     <div className="card text-center bg-dark animate__animated animate__fadeInUp">
       <div className="overflow">
         <img src={imageSource} alt="a wallpaper" className="card-img-top" />
@@ -26,6 +34,9 @@ function Card({ imageSource, title, text }) {
         </a> */}
       </div>
     </div>
+    </div>
+
+
   );
 }
 

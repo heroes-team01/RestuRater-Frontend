@@ -7,17 +7,36 @@ import { BrowserRouter as Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import rest from './componants/Restrunt.json';
 import Main from "./componants/Main";
+import Home from "./componants/home/home";
 import Cardtest from './componants/Aboutus/Cards/Cardtest';
-// import axios from 'axios';
+import ModelCard from "./componants/model";
+import Profile from  "./componants/profile";
+import { withAuth0 } from '@auth0/auth0-react';
 
+
+// import axios from 'axios
 class App extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = { 
     data: rest ,
+    showingData: {}
     }
   }
+  showCard = (values) => {
+
+    this.setState({
+    selected:true,
+    showingData:values,
+  });
+  }
+
+  hideCard = () => {
+    this.setState({
+    selected: false});
+}
+
 
   filteredData = (data) =>{
     this.setState({data });
@@ -25,6 +44,8 @@ class App extends React.Component {
 
 
   render() {
+    const { isAuthenticated } = this.props.auth0;
+
   return (
 
     <div>
@@ -41,8 +62,27 @@ class App extends React.Component {
       <Indexview />
       </Route>
       <Route path='/category'>
-      <Main restData={this.state.data} filteredData={this.filteredData}/>
+      <Main showCard={this.showCard} restData={this.state.data} filteredData={this.filteredData}/>
+      <ModelCard selected={this.state.selected} showingData={this.state.showingData} hideCard={this.hideCard} />
       </Route>
+      <Route path='/'>
+      <Home/>
+      </Route>
+      {/* <Route path="/profile">
+
+    
+              {
+                isAuthenticated &&
+                <Profile />
+
+              }
+                              </Route> */}
+                              <Route exact path="/">
+              {isAuthenticated ? <Profile /> : "hiiiiiii"}
+            </Route>
+
+
+              {/* <Profile /> */}
       </Switch>
       </Route>
     </div>
@@ -51,4 +91,4 @@ class App extends React.Component {
 }
 }
 
-export default App;
+export default withAuth0(App);
