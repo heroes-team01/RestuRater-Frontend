@@ -1,18 +1,28 @@
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container } from "react-bootstrap";
-import React from "react";
-import Category from "./components/category";
-class App extends React.Component {
- 
-  render() {
-    return (
-      <Container align="center">
 
-        <Category />
-   </Container>
-    );
-  }
+import './App.css';
+import Indexview from './componants/dashboard/Indexview';
+import Cards from './componants/Aboutus/Cards/Cards';
+import { BrowserRouter as Route, Switch } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import React from "react";
+
+function App() {
+  return (
+
+    <div>
+      <Route>
+      <Switch>
+      <Route path='/Aboutus'>
+        <Cards />
+      </Route>
+      <Route path='/admin'>
+      <Indexview />
+      </Route>
+      </Switch>
+      </Route>
+    </div>
+  
+  );
 }
 
 export default App;
