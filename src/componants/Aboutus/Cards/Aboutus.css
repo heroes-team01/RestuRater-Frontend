@@ -35,13 +35,13 @@ h3 {
 h6 {
 	margin: 5px 0;
 	text-transform: uppercase;
-    color: black;
+    color: #32657ce1;
 }
 
 p {
 	font-size: 14px;
 	line-height: 21px;
-    color: black;
+    color: #32657ce1;
 }
 
 .all-cards {
@@ -55,7 +55,7 @@ p {
 
 
 .card-container {
-	background-color: #B6E2D3;
+	background-color: #32657c33;
 	border-radius: 5px;
 	box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
 	color: #FAE8E0;
@@ -88,11 +88,13 @@ p {
 }
 
 button.primary {
-	background-color: #9b9ba0;
-	border: 2px solid #a09393;
+	background-color: whitesmoke;
+	border: 2px solid #32657ce1;
 	border-radius: 3px;
-	color: #D8A7B1;
-	font-family: Montserrat, sans-serif;
+	
+	font-family: 'Courgette', cursive;
+	color: #c22242;
+	/* font-family: Montserrat, sans-serif; */
 	font-weight: 500;
 	padding: 10px 10px;
 	margin-left: 15px;
@@ -103,7 +105,7 @@ button.primary.ghost {
 	/* color: #d3597e; */
 	
 }
-.primary a{color: #bf4e4e;text-decoration: none; }
+.primary a{color: #bf4e4e;text-decoration: none;font-family: 'Courgette', cursive; }
 .ghost{color: #a78690;}
 .buttons a:active,
 .buttons a:focus,
@@ -112,7 +114,8 @@ button.primary.ghost {
   text-decoration: none;}
 
 .skills {
-	background-color: #1F1A36;
+	background-color: #32657ce1;
+	/* background-color: #1F1A36; */
 	text-align: left;
 	padding: 15px;
 	margin-top: 30px;
@@ -125,7 +128,7 @@ button.primary.ghost {
 }
 
 .skills ul li {
-	border: 1px solid #2D2747;
+	border: 1px solid whitesmoke;
 	border-radius: 2px;
 	display: inline-block;
 	font-size: 12px;
@@ -156,4 +159,9 @@ footer i {
 footer a {
 	color: #3c97bf;
 	text-decoration: none;
+}
+
+h4 {
+	color: #f8d301;
+	font-family: 'Courgette', cursive;
 }
