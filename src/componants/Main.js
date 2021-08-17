@@ -22,19 +22,22 @@ class Main extends React.Component{
             </nav>
     </header>
             <Form filteredData={this.props.filteredData}/>
-
+            <div className="totalCards">
          { this.props.restData.map((item)=>{
                 return (
+                   
                     <Category title={item.title} address={item.address} type={item.type} image_url={item.image_url}
                     description={item.description}
                     showCard={this.props.showCard} 
-                   ></Category>
+                   />
                    
                    )
 
 
-            })}
-
+            })
+          
+            }
+  </div>
     </div>
         )
     };

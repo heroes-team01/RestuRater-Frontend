@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Logo from './home/img/logo.png';
 
 export class Header extends Component {
     render() {
@@ -6,9 +7,7 @@ export class Header extends Component {
             <div>
                 <header>
         <div class="logo-container">
-            {/* <img src= {logo} alt=""/> */}
-            <p class="main-logo">Restu<span>Rater</span>
-            </p>
+            <img src= {Logo} alt=""/>
         </div>
             <nav >
               <div class="bar">

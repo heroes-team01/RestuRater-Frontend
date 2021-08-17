@@ -103,7 +103,7 @@ button.primary.ghost {
 	/* color: #d3597e; */
 	
 }
-.primary a{color: #bf4e4e; }
+.primary a{color: #bf4e4e;text-decoration: none; }
 .ghost{color: #a78690;}
 .buttons a:active,
 .buttons a:focus,
