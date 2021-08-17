@@ -25,17 +25,18 @@ function Dashboard() {
                   <Col xs="7">
                     <div className="numbers">
                       <p className="card-category">Number of user</p>
-                      <Card.Title as="h4">150GB</Card.Title>
+                      <Card.Title as="h4">4</Card.Title>
                     </div>
                   </Col>
                 </Row>
               </Card.Body>
               <Card.Footer>
-                <hr></hr>
-                <div className="stats">
+
+                <br></br>
+                {/* <div className="stats">
                   <i className="fas fa-redo mr-1"></i>
                   Update Now
-                </div>
+                </div> */}
               </Card.Footer>
             </Card>
           </Col>
@@ -50,18 +51,19 @@ function Dashboard() {
                   </Col>
                   <Col xs="7">
                     <div className="numbers">
-                      <p className="card-category">Views</p>
-                      <Card.Title as="h4">$ 1,345</Card.Title>
+                      <p className="card-category">Number of comment</p>
+                      <Card.Title as="h4">6</Card.Title>
                     </div>
                   </Col>
                 </Row>
               </Card.Body>
               <Card.Footer>
-                <hr></hr>
-                <div className="stats">
+
+                <br></br>
+                {/* <div className="stats">
                   <i className="far fa-calendar-alt mr-1"></i>
                   Last day
-                </div>
+                </div> */}
               </Card.Footer>
             </Card>
           </Col>
@@ -76,19 +78,22 @@ function Dashboard() {
                   </Col>
                   <Col xs="7">
                     <div className="numbers">
-                      <p className="card-category">Errors</p>
+                      <p className="card-category">Number of Restaurants</p>
                       <Card.Title as="h4">23</Card.Title>
                     </div>
                   </Col>
                 </Row>
               </Card.Body>
-              <Card.Footer>
+              
+              <br></br>
+              <br></br>
+              {/* <Card.Footer>
                 <hr></hr>
                 <div className="stats">
                   <i className="far fa-clock-o mr-1"></i>
                   In the last hour
                 </div>
-              </Card.Footer>
+              </Card.Footer> */}
             </Card>
           </Col>
         </Row>
@@ -96,7 +101,7 @@ function Dashboard() {
           <Col md="8">
             <Card>
               <Card.Header>
-                <Card.Title as="h4">Users Behavior</Card.Title>
+                <Card.Title as="h4">Users comment</Card.Title>
                 <p className="card-category">24 Hours performance</p>
               </Card.Header>
               <Card.Body>
@@ -151,19 +156,14 @@ function Dashboard() {
                   />
                 </div>
               </Card.Body>
-              <Card.Footer>
+              {/* <Card.Footer>
                 <div className="legend">
                   <i className="fas fa-circle text-info"></i>
                   Open <i className="fas fa-circle text-danger"></i>
                   Click <i className="fas fa-circle text-warning"></i>
                   Click Second Time
                 </div>
-                <hr></hr>
-                <div className="stats">
-                  <i className="fas fa-history"></i>
-                  Updated 3 minutes ago
-                </div>
-              </Card.Footer>
+              </Card.Footer> */}
             </Card>
           </Col>
       </Container>
