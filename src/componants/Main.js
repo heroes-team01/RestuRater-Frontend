@@ -5,6 +5,7 @@ import Form from "./selectedRest";
 import { withAuth0 } from '@auth0/auth0-react';
 import Logo from './home/img/logo.png';
 
+
 class Main extends React.Component{
 
     render(){
@@ -36,12 +37,14 @@ class Main extends React.Component{
             <div className="totalCards">
          { this.props.restData.map((item)=>{
                 return (
-                   
+                   <>
                     <Category title={item.title} address={item.address} type={item.type} image_url={item.image_url}
                     description={item.description}
                     showCard={this.props.showCard} 
                    />
-                   
+
+                 
+                   </>
                    )
 
 

@@ -3,6 +3,8 @@ import { withAuth0 } from "@auth0/auth0-react";
 import Header from "./header";
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Myreviews from "./comment/Mycomments";
+import Footer from './footer';
 
 class Profile extends Component {
   render() {
@@ -21,6 +23,11 @@ class Profile extends Component {
     </Card.Text>
   </Card.Body>
 </Card>
+
+<Myreviews />
+
+
+<Footer />
         </div>
       
     );
