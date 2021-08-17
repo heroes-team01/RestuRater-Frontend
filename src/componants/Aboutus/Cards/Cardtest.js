@@ -8,7 +8,7 @@ import pic3 from '../img/33333.jpg'
 import pic4 from '../img/4444444.jpg'
 
 import Header from "../../header";
-
+import Footer from "../../footer";
 // import { Link } from "react-router-dom";
 
 class AboutUs extends Component {
@@ -96,7 +96,7 @@ class AboutUs extends Component {
           {card}
 
         </div>
-
+<Footer/>
       </>
     );
   }
