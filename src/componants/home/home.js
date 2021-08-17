@@ -7,6 +7,7 @@ import Carousel from 'react-bootstrap/Carousel'
 import './home.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button'
+// import Profile from  "../profile";
 
 
 import LoginButton from "../login";
@@ -23,6 +24,8 @@ import Logo from './img/logo.png'
 
 export class Home extends Component {
     render() {
+      const { isAuthenticated } = this.props.auth0;
+
         return (
             <body>
                 <header>
@@ -35,6 +38,11 @@ export class Home extends Component {
               <div class="bar">
                 <a href="../home" class="bar-item active">Home</a>
                 <a href="../category" class="bar-item">Categories</a>
+                {
+                isAuthenticated &&
+<a href="../profile" class="bar-item ">profile</a>
+
+              }
                 <a href="../Aboutus/Cards/Cardtest" class="bar-item ">About us</a>
               </div>
             </nav>
