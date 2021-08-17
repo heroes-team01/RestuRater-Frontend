@@ -68,7 +68,8 @@ class App extends React.Component {
       <Route path='/'>
       <Home/>
       </Route>
-      {/* <Route path="/profile">
+                              <Switch>
+      <Route path="/profile">
 
     
               {
@@ -76,10 +77,11 @@ class App extends React.Component {
                 <Profile />
 
               }
-                              </Route> */}
-                              <Route exact path="/">
+                              </Route>
+                              {/* <Route exact path="/profile">
               {isAuthenticated ? <Profile /> : "hiiiiiii"}
-            </Route>
+            </Route> */}
+                              </Switch>
 
 
               {/* <Profile /> */}
