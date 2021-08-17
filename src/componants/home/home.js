@@ -8,8 +8,8 @@ import './home.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button'
 // import Profile from  "../profile";
-
-
+import Review from './review'
+import Footer from '../footer';
 import LoginButton from "../login";
 import LogoutButton from "../logout";
 import { withAuth0 } from '@auth0/auth0-react';
@@ -112,28 +112,21 @@ export class Home extends Component {
 </section>
 
 
-<div id='reviews'> 
-<h2>RestuRator Reviews</h2>
-</div>
 
 
 
 
-<section class="section-story">
-            
-            <div class="story-container">
+
+<Review />
                 
 
-                </div>
-           
-        </section>
+                
 
 
 
 
 
-
-
+<Footer />
 
 
 

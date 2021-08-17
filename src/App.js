@@ -87,6 +87,7 @@ class App extends React.Component {
               {/* <Profile /> */}
       </Switch>
       </Route>
+      <Route path='/profile'></Route>
     </div>
   
   );

@@ -28,6 +28,7 @@ class Main extends React.Component{
 
               }
                 <a href="../Aboutus/Cards/Cardtest" class="bar-item ">About us</a>
+                
               </div>
             </nav>
     </header>
