@@ -1,23 +1,15 @@
-<<<<<<< HEAD
-
-=======
 // import logo from './logo.svg';
 import React from "react";
->>>>>>> a0c4daabb0e8cbc957cb756ab8cbdf3484f48d90
 import './App.css';
 import Indexview from './componants/dashboard/Indexview';
 // import Cards from './componants/Aboutus/Cards/Cards';
 import { BrowserRouter as Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-<<<<<<< HEAD
-import React from "react";
-=======
 import rest from './componants/Restrunt.json';
 import Main from "./componants/Main";
 import Home from "./componants/home/home";
 import Cardtest from './componants/Aboutus/Cards/Cardtest';
 import ModelCard from "./componants/model";
->>>>>>> a0c4daabb0e8cbc957cb756ab8cbdf3484f48d90
 
 import LoginButton from "./componants/login";
 
