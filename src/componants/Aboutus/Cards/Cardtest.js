@@ -24,7 +24,7 @@ class AboutUs extends Component {
         "name": "Raghad-Abdelghani",
         "img": pic4,
         "githup": `https://github.com/Raghad-Abdelghani`,
-        "Linkedin": ''
+        "Linkedin": 'https://www.linkedin.com/in/raghad-abdelghani/'
       },
       {
         "name": "Heba Almomani",
