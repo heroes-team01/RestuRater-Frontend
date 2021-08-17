@@ -16,7 +16,8 @@
     border: 1px solid $light-gray;
     border-radius: $border-radius-base;
     color: #565656;
-    @include input-size($padding-base-vertical, $padding-base-horizontal - 4, $height-base);
+    font-size: 20px;
+    @include input-size($padding-base-vertical, $padding-base-horizontal - 4, 60px);
     @include box-shadow(none);
     
     &:focus{

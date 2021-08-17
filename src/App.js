@@ -10,11 +10,9 @@ import Main from "./componants/Main";
 import Home from "./componants/home/home";
 import Cardtest from './componants/Aboutus/Cards/Cardtest';
 import ModelCard from "./componants/model";
-
-import LoginButton from "./componants/login";
-
+import Profile from  "./componants/profile";
 import { withAuth0 } from '@auth0/auth0-react';
-import LogoutButton from "./componants/logout";
+import Dashboard from './componants/dashboard/layouts/Admin'
 
 // import axios from 'axios
 class App extends React.Component {
@@ -46,6 +44,8 @@ class App extends React.Component {
 
 
   render() {
+    const { isAuthenticated } = this.props.auth0;
+
   return (
 
     <div>
@@ -65,14 +65,34 @@ class App extends React.Component {
       <Main showCard={this.showCard} restData={this.state.data} filteredData={this.filteredData}/>
       <ModelCard selected={this.state.selected} showingData={this.state.showingData} hideCard={this.hideCard} />
       </Route>
-      <Route path='/'>
-      {this.props.auth0.isAuthenticated ? LogoutButton: <LoginButton />}
+                         
+  <Route path="/profile">
 
-<LogoutButton/>
-      <Home/>
-      </Route>
+
+      {
+        isAuthenticated &&
+        <Profile />
+
+      }
+        </Route>
+
+          <Route path='/admin'>
+          <Dashboard/>
+          </Route>
+
+          <Route path='/'>
+          <Home/>
+          </Route>
+                              {/* <Route exact path="/profile">
+              {isAuthenticated ? <Profile /> : "hiiiiiii"}
+            </Route> */}
+                             
+
+
+              {/* <Profile /> */}
       </Switch>
       </Route>
+      <Route path='/profile'></Route>
     </div>
   
   );
