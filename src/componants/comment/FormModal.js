@@ -9,24 +9,24 @@ export class FormModal extends Component {
       <div>
         <Modal show={this.props.show} onHide={this.props.handelDisplayModal}>
           <Modal.Header>
-            <Modal.Title>Add Cat</Modal.Title>
+            <Modal.Title>Add Comment</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <Form onSubmit={(e) => this.props.handelSubmitForm(e)}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Cat Name</Form.Label>
-                <Form.Control name="catName" type="text" placeholder="Enter the cats name" />
+                <Form.Label>Resturant Name</Form.Label>
+                <Form.Control name="catName" type="text" />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Cat Breed</Form.Label>
-                <Form.Control name="catBreed" type="text" placeholder="Enter the cats breed" />
+                <Form.Label>comment</Form.Label>
+                <Form.Control name="catBreed" type="text"  />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Cat Image</Form.Label>
-                <Form.Control name="catImage" type="text" placeholder="Enter the image URL" />
+                <Form.Label>Image</Form.Label>
+                <Form.Control name="catImage" type="text" />
               </Form.Group>
               <Button variant="primary" type="submit">
-                Add Cat
+                Add comment
               </Button>
             </Form>
           </Modal.Body>

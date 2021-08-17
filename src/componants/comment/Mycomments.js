@@ -15,9 +15,10 @@ export class Myreviews extends Component {
     super(props);
     this.state = {
       reviews: [],
-      updateCatObject: {},
+      apdateComObj: {},
       displayAddModal: false,
       displayUpdateModal: false,
+      idx:0,
     };
   }
 
@@ -26,11 +27,12 @@ export class Myreviews extends Component {
     
     const userEmail = this.props.auth0.user.email;
     axios.get(`${process.env.REACT_APP_SERVER}/reviews?email=${userEmail}`).then((axiosResponse) => { // .then access the 
-      // console.log(axiosResponse.data); // to access the axios response data you need to target the .data property
+      console.log('test' + axiosResponse.data); // to access the axios response data you need to target the .data property
       this.setState({
         reviews: axiosResponse.data
       });
-    }).catch(error => alert(error)); // will execute if the promise was rejected, basically something going wrong
+    }).catch(error => alert(error));
+    console.log('reviews' + this.state.reviews) // will execute if the promise was rejected, basically something going wrong
   };
 
 
@@ -39,11 +41,14 @@ export class Myreviews extends Component {
   }
 
  
-  handelDisplayUpdateModal = (catObject) => {
+  handelDisplayUpdateModal = (comObject,idx) => {
     this.setState({
       displayUpdateModal: !this.state.displayUpdateModal,
-      updateCatObject: catObject
+      apdateComObj: comObject,
+      idx:idx
+
     });
+    // console.log(this.state.idx)
   }
 
   /**
@@ -56,9 +61,9 @@ export class Myreviews extends Component {
 
     const body = {
       email: this.props.auth0.user.email, // we are getting the email of the user from auth0
-      cat_name: e.target.catName.value,
-      cat_breed: e.target.catBreed.value,
-      cat_img: e.target.catImage.value,
+      rest_name: e.target.catName.value,
+      rating_comment: e.target.catBreed.value,
+      user_img: e.target.catImage.value,
     };
 
     axios.post(`${process.env.REACT_APP_SERVER}/review`, body).then(axiosResponse => {
@@ -76,17 +81,17 @@ export class Myreviews extends Component {
    * Delete Cat function
    */
 
-  handelDeleteCat = (catId) => {
-    axios.delete(`${process.env.REACT_APP_SERVER}/review/${catId}`).then(res => {
+  handelDeleteCat = (comId) => {
+    axios.delete(`${process.env.REACT_APP_SERVER}/review/${comId}`).then(res => {
       // console.log(res.data);
       if (res.data.ok === 1) {
         // once the item is deleted on the backend
         // create a temp var that will contain all of the reviews except the cat the got deleted
         // then update the state to re-render
 
-        const tempCatObj = this.state.reviews.filter(cat => cat._id !== catId);
+        const tempObj = this.state.reviews.filter(com => com._id !== comId);
         this.setState({
-          reviews: tempCatObj
+          reviews: tempObj
         });
       }
     }).catch(error => alert(error))
@@ -100,12 +105,11 @@ export class Myreviews extends Component {
     return (
       <>
         <br />
-        <h1>My reviews! 🐱</h1>
+        <h1>My reviews! </h1>
         <br />
-        {/* Button used to activate the modal */}
-        <Button variant="secondary" onClick={() => this.handelDisplayModal()}>Add a Cat</Button>
+        <Button variant="secondary" onClick={() => this.handelDisplayModal()}>Add comment</Button>
 
-        {/* The Add form Modal */}
+     
         <FormModal
           show={this.state.displayAddModal}
           handelDisplayModal={this.handelDisplayModal}
@@ -116,9 +120,10 @@ export class Myreviews extends Component {
           <UpdateFormModal
             show={this.state.displayUpdateModal}
             handelDisplayModal={this.handelDisplayUpdateModal}
-            catObject={this.state.updateCatObject}
+            comObject={this.state.apdateComObj}
             updatereviews={this.updatereviewsArrOfObjectState}
             reviewsArr={this.state.reviews}
+            idx= {this.state.idx}
           />
         }
         <br />
@@ -127,24 +132,24 @@ export class Myreviews extends Component {
           this.state.reviews.length &&
           <Row>
             {
-              this.state.reviews.map((cat, idx) => {
+              this.state.reviews.map((com, idx) => {
                 return (
                   <Col md={4} key={idx}>
                     <Card
                       style={{ width: '18rem' }}
                     >
-                      <Card.Img variant="top" src={cat.cat_img} />
+                      <Card.Img variant="top" src={com.user_img} />
                       <Card.Body>
-                        <Card.Title>{cat.cat_name}</Card.Title>
+                        <Card.Title>{com.rest_name}</Card.Title>
                         <Card.Text>
-                          {cat.cat_breed} 🐈
+                          {com.rating_comment} 
                         </Card.Text>
-                        <Button variant="outline-danger" onClick={() => this.handelDeleteCat(cat._id)}>
-                          Delete Cat
+                        <Button variant="outline-danger" onClick={() => this.handelDeleteCat(com._id)}>
+                          Delete comment
                         </Button>
                         <br />
-                        <Button variant="outline-dark" onClick={() => this.handelDisplayUpdateModal(cat)}>
-                          Update Cat
+                        <Button variant="outline-dark" onClick={() => this.handelDisplayUpdateModal(com,idx)}>
+                          Update comment
                         </Button>
                       </Card.Body>
                     </Card>
