@@ -65,23 +65,23 @@ class App extends React.Component {
       <Main showCard={this.showCard} restData={this.state.data} filteredData={this.filteredData}/>
       <ModelCard selected={this.state.selected} showingData={this.state.showingData} hideCard={this.hideCard} />
       </Route>
-      <Route path='/'>
-      <Home/>
-      </Route>
-                              <Switch>
-      <Route path="/profile">
+                         
+  <Route path="/profile">
 
-    
-              {
-                isAuthenticated &&
-                <Profile />
 
-              }
-                              </Route>
+      {
+        isAuthenticated &&
+        <Profile />
+
+      }
+        </Route>
+          <Route path='/'>
+          <Home/>
+          </Route>
                               {/* <Route exact path="/profile">
               {isAuthenticated ? <Profile /> : "hiiiiiii"}
             </Route> */}
-                              </Switch>
+                             
 
 
               {/* <Profile /> */}
