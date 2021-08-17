@@ -5,7 +5,7 @@ export class Footer extends Component {
             <div>
                 <footer style={{background:'#32657ce1', position:'static', color:'#f8d301',fontFamily: "'Courgette', cursive"}} >
 
-<h5>All rights reserved @Heros Team</h5>
+<h3>All rights reserved @Heros Team</h3>
 
                 </footer>
             </div>
