@@ -5,9 +5,10 @@
 import React, { Component } from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 import './home.css'
+import Review from './review';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button'
-
+import Footer from '../footer';
 
 import LoginButton from "../login";
 import LogoutButton from "../logout";
@@ -35,6 +36,7 @@ export class Home extends Component {
               <div class="bar">
                 <a href="../home" class="bar-item active">Home</a>
                 <a href="../category" class="bar-item">Categories</a>
+
                 <a href="../Aboutus/Cards/Cardtest" class="bar-item ">About us</a>
               </div>
             </nav>
@@ -103,27 +105,19 @@ export class Home extends Component {
 </section>
 
 
-<div id='reviews'> 
-<h2>RestuRator Reviews</h2>
-</div>
 
 
 
 
-<section class="section-story">
+
+<section className="section">
             
-            <div class="story-container">
-                
-
-                </div>
-           
-        </section>
+            <Review />
+</section>
 
 
 
-
-
-
+<Footer />
 
 
 

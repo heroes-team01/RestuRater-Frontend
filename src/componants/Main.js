@@ -18,6 +18,7 @@ class Main extends React.Component{
                 <a href="../home" class="bar-item active">Home</a>
                 <a href="../category" class="bar-item">Categories</a>
                 <a href="../Aboutus/Cards/Cardtest" class="bar-item ">About us</a>
+                
               </div>
             </nav>
     </header>

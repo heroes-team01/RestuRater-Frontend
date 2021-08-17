@@ -70,6 +70,7 @@ class App extends React.Component {
       </Route>
       </Switch>
       </Route>
+      <Route path='/profile'></Route>
     </div>
   
   );
