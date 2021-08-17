@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import './home/home.css'
 export class Footer extends Component {
     render() {
         return (
             <div>
-                <footer>
+                <footer style={{background:'#32657ce1', position:'static', color:'#f8d301',fontFamily: "'Courgette', cursive"}} >
 
 <h5>All rights reserved @Heros Team</h5>
 

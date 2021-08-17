@@ -1,74 +1,55 @@
 # RestuRater-Frontend
 
 
+* **Group members** : 
+```
+1- Heba Al-momani
+2- Mahmoud Abubaker
+3- Amneh Al-Momany
+4- Raghad Alboriny
+```
 
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1- **What is the vision of this product?**
 
-## Available Scripts
+`A website that contains a variety categories of restarunt types which provide you with a short description for each restarunt, and you can add your feedback.`
 
-In the project directory, you can run:
+2- **What pain point does this project solve?**
 
-### `npm start`
+`It guides people to different types of restarunt,To be able to try new types of restaurants .`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+3- **Why should we care about your product?**
 
-### `npm test`
+```
+1- The web app will provide information to the users about all the different restarunt in the area
+2- Each shop will contain reviews of the customer’s experiences
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+* **Software requirements :**
+```
+1- A valid JSON file that contains a] number restarunt of  with their tile, images, descriptions,addresses, etc..
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2- React Bootstrap.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3- Mongo.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4- Heroku.
 
-### `npm run eject`
+5- Nelify.
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* **USER STORIES** :
+```
+1- As a user, I want to add feedback for any restarunt in the list.
+2- As a user, I want a page where I can find all my targeted restarunt type.
+3- As a user, I want to interact with other restarunt card.
+5- As a user, I want to have my own profile.
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* **Wire frame** [click here](https://miro.com/app/board/o9J_l27rkZ0=/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* **Domain Modeling:**
+![img](./Workspace.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

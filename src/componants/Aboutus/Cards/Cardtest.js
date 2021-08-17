@@ -24,19 +24,19 @@ class AboutUs extends Component {
         "name": "Raghad-Abdelghani",
         "img": pic4,
         "githup": `https://github.com/Raghad-Abdelghani`,
-        "Linkedin": ''
+        "Linkedin": 'https://www.linkedin.com/in/raghad-abdelghani/'
       },
       {
         "name": "Heba Almomani",
         "img": pic2,
         "githup": `https://github.com/Heba1998`,
-        "Linkedin": ''
+        "Linkedin": 'https://www.linkedin.com/in/heba-almomani/'
       },
       {
         "name": "Amneh AL-Momany",
         "img": pic3,
         "githup": `https://github.com/Amneh-momani`,
-        "Linkedin": ''
+        "Linkedin": 'https://www.linkedin.com/in/amnehalmomany-b13534193/'
       },
       {
         "name": "Mahmoud Abubaker",
@@ -63,13 +63,13 @@ class AboutUs extends Component {
                 <button className="primary ">
                   <a href={item.githup}>GitHub</a>
                 </button>
-                <button className="primary ghost">
-                  <a href={item.portfolio}>Linkedin</a>
+                <button className="primary ">
+                  <a href={item.Linkedin}>Linkedin</a>
 
                 </button>
               </div>
               <div className="skills">
-                <h6>Skills</h6>
+                <h4>Skills</h4>
                 <ul>
                   <li>FrontEnd and BackEnd Development</li>
                   <li>HTML</li>
