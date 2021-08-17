@@ -8,7 +8,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import FormModal from './FormModal';
 import UpdateFormModal from './UpdateFormModal';
-
+// heros team work 
 export class Myreviews extends Component {
 
   constructor(props) {
@@ -26,13 +26,13 @@ export class Myreviews extends Component {
   componentDidMount = () => {
     
     const userEmail = this.props.auth0.user.email;
-    axios.get(`${process.env.REACT_APP_SERVER}/reviews?email=${userEmail}`).then((axiosResponse) => { // .then access the 
-      console.log('test' + axiosResponse.data); // to access the axios response data you need to target the .data property
+    axios.get(`${process.env.REACT_APP_SERVER}/reviews?email=${userEmail}`).then((axiosResponse) => { 
+      console.log('test' + axiosResponse.data); 
       this.setState({
         reviews: axiosResponse.data
       });
     }).catch(error => alert(error));
-    console.log('reviews' + this.state.reviews) // will execute if the promise was rejected, basically something going wrong
+    console.log('reviews' + this.state.reviews)
   };
 
 
@@ -51,16 +51,14 @@ export class Myreviews extends Component {
     // console.log(this.state.idx)
   }
 
-  /**
-   * Handel the submission of a new cat
-   */
+ 
   handelAddCatForm = (e) => {
 
     e.preventDefault();
-    this.handelDisplayModal(); // hide the modal after form submission
+    this.handelDisplayModal();
 
     const body = {
-      email: this.props.auth0.user.email, // we are getting the email of the user from auth0
+      email: this.props.auth0.user.email, 
       rest_name: e.target.catName.value,
       rating_comment: e.target.catBreed.value,
       user_img: e.target.catImage.value,
@@ -76,19 +74,13 @@ export class Myreviews extends Component {
     }).catch(error => alert(error));
   }
 
-  /**
-   * 
-   * Delete Cat function
-   */
+
 
   handelDeleteCat = (comId) => {
     axios.delete(`${process.env.REACT_APP_SERVER}/review/${comId}`).then(res => {
       // console.log(res.data);
       if (res.data.ok === 1) {
-        // once the item is deleted on the backend
-        // create a temp var that will contain all of the reviews except the cat the got deleted
-        // then update the state to re-render
-
+ 
         const tempObj = this.state.reviews.filter(com => com._id !== comId);
         this.setState({
           reviews: tempObj
