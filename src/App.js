@@ -12,7 +12,7 @@ import Cardtest from './componants/Aboutus/Cards/Cardtest';
 import ModelCard from "./componants/model";
 import Profile from  "./componants/profile";
 import { withAuth0 } from '@auth0/auth0-react';
-
+import Dashboard from './componants/dashboard/layouts/Admin'
 
 // import axios from 'axios
 class App extends React.Component {
@@ -75,6 +75,11 @@ class App extends React.Component {
 
       }
         </Route>
+
+          <Route path='/admin'>
+          <Dashboard/>
+          </Route>
+
           <Route path='/'>
           <Home/>
           </Route>
