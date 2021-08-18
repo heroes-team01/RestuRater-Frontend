@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 // import { withAuth0 } from "@auth0/auth0-react";
 // import NavBar from '../components/NavBar'
-import './Aboutus.css';
-import pic1 from "../img/1111.jpg";
-import pic2 from '../img/22222.jpg'
-import pic3 from '../img/33333.jpg'
-import pic4 from '../img/4444444.jpg'
+import './Aboutus/Cards/Aboutus.css';
+import pic1 from "./Aboutus/img/1111.jpg";
+import pic2 from './Aboutus/img/22222.jpg'
+import pic3 from './Aboutus/img/33333.jpg'
+import pic4 from './Aboutus/img/4444444.jpg'
 
-import Header from "../../header";
-import Footer from "../../footer";
+import Header from "./header";
+import Footer from "./footer";
 // import { Link } from "react-router-dom";
 
 class AboutUs extends Component {
