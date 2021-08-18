@@ -15,7 +15,7 @@ export class Myreviews extends Component {
     super(props);
     this.state = {
       reviews: [],
-      updateCatObject: {},
+      UpdateReviewObj: {},
       displayAddModal: false,
       displayUpdateModal: false,
     };
@@ -42,7 +42,7 @@ export class Myreviews extends Component {
   handelDisplayUpdateModal = (catObject) => {
     this.setState({
       displayUpdateModal: !this.state.displayUpdateModal,
-      updateCatObject: catObject
+      UpdateReviewObj: catObject
     });
   }
 
@@ -116,7 +116,7 @@ export class Myreviews extends Component {
           <UpdateFormModal
             show={this.state.displayUpdateModal}
             handelDisplayModal={this.handelDisplayUpdateModal}
-            catObject={this.state.updateCatObject}
+            catObject={this.state.UpdateReviewObj}
             updatereviews={this.updatereviewsArrOfObjectState}
             reviewsArr={this.state.reviews}
           />
