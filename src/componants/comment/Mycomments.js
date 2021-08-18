@@ -52,7 +52,7 @@ export class Myreviews extends Component {
   }
 
  
-  handelAddCatForm = (e) => {
+  handelAddForm = (e) => {
 
     e.preventDefault();
     this.handelDisplayModal();
@@ -76,7 +76,7 @@ export class Myreviews extends Component {
 
 
 
-  handelDeleteCat = (comId) => {
+  handelDelete = (comId) => {
     axios.delete(`${process.env.REACT_APP_SERVER}/review/${comId}`).then(res => {
       // console.log(res.data);
       if (res.data.ok === 1) {
@@ -136,7 +136,7 @@ export class Myreviews extends Component {
                         <Card.Text>
                           {com.rating_comment} 
                         </Card.Text>
-                        <Button variant="outline-danger" onClick={() => this.handelDeleteCat(com._id)}>
+                        <Button variant="outline-danger" onClick={() => this.handelDelete(com._id)}>
                           Delete comment
                         </Button>
                         <br />

@@ -16,7 +16,7 @@ export class UpdateFormModal extends Component {
   }
 
   handelNameChange = (e) => this.setState({ name: e.target.value });
-  handelBreedChange = (e) => this.setState({ comment: e.target.value });
+  handelcommentChange = (e) => this.setState({ comment: e.target.value });
   handelImageChange = (e) => this.setState({ image: e.target.value });
 
   handelSubmitForm = ((e) => {
@@ -50,7 +50,7 @@ export class UpdateFormModal extends Component {
               </Form.Group>
               <Form.Group className="mb-3">
                 <Form.Label>comment</Form.Label>
-                <Form.Control onChange={(e) => this.handelBreedChange(e)} value={this.state.comment} type="text" name='comment' />
+                <Form.Control onChange={(e) => this.handelcommentChange(e)} value={this.state.comment} type="text" name='comment' />
               </Form.Group>
               <Form.Group className="mb-3">
                 <Form.Label>Image</Form.Label>
