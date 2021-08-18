@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import axios from "axios";
+import React from "react";
 
+// react-bootstrap components
 import {
   Card,
   Table,
@@ -10,60 +10,22 @@ import {
 } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import Restrunt from '../../Restrunt.json';
-// import { react } from "@babel/types";
-import AddForm from './AddForm';
 
 
-export class TableList extends Component {
+function TableList() {
 
-    constructor(props) {
-      super(props);
-      this.state = {
-        Restrunts: [],
-        displayAddModal: false
-  
-      };
+//   AddCardState = () => {
+//     let info={ title:this.props.title,
+//     description:this.props.description,
+//     image_url :this.props.image_url,
+//     type :this.props.type
+//     }
 
-  let handelDeleteRest = (serverId) => {
-    axios.delete(`https://http//localhost:4999/allresturant/${serverId}`).then(res => {
-      if (res.data.ok === 1) {
-        const tempRestObj = this.state.Restrunts.filter(cat => cat._id !== serverId);
-        this.setState({
-          Restrunts: tempRestObj
-        });
-      }
-    }).catch(error => alert(error))
-  }
-
-  let handelDisplayModal = () => {
-    this.setState({ 
-      displayModal: !this.state.displayAddModal });
-  }
-
- let handelAddForm = (e) => {
-
-    e.preventDefault();
-    this.handelDisplayModal();
-  
-
-    // const body = {
-    //   email: this.props.auth0.user.email, // we are getting the email of the user from auth0
-    //   title: e.target.title.value,
-    //   address: e.target.address.value,
-    //   description: e.target.description.value,
-    //   image_url: e.target.image_url.value,
-    // };
-  };
+//     this.props.showCard(info);
+// }
 
   return (
     <>
-
-<AddForm
-          show={this.state.displayAddModal}
-          handelDisplayModal={handelDisplayModal}
-          handelSubmitForm={handelAddForm}
-        />
-        
       <Container fluid>
         <Row>
           <Col md="12">
@@ -81,7 +43,7 @@ export class TableList extends Component {
                       <th className="border-0">address</th>
                       <th className="border-0">description</th>
                       <th className="border-0">type</th>
-                      <th className="border-0">Buttom</th>
+                      {/* <th className="border-0">Buttom</th> */}
                     </tr>
                   </thead>
                   <tbody>
@@ -91,7 +53,7 @@ export class TableList extends Component {
                         <td>{value.address}</td>
                         <td>{value.description}</td>
                         <td>{value.type}</td>
-                        <td><Button variant="outline-danger" onClick={() => handelDeleteRest(Restrunt._id)}>Delete</Button></td>
+                        {/* <td><button variant="primary" type="submit">Delete</button></td> */}
                       </tr>
                       )
                     })}
@@ -104,11 +66,8 @@ export class TableList extends Component {
           </Col>
         </Row>
       </Container>
-
-      
     </>
-    );
+  );
 }
-  }
 
 export default TableList;

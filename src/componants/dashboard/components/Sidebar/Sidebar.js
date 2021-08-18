@@ -29,15 +29,15 @@ function Sidebar({ color, image, routes }) {
   };
   return (
     <div className="sidebar" data-image={image} data-color={color}>
-      <div
+      {/* <div
         className="sidebar-background"
         style={{
           backgroundImage: "url(" + image + ")",
         }}
-      />
+      /> */}
       <div className="sidebar-wrapper">
         <div className="logo d-flex align-items-center justify-content-start">
-          <a
+          {/* <a
             href="https://www.creative-tim.com?ref=lbd-sidebar"
             className="simple-text logo-mini mx-1"
           >
@@ -47,8 +47,8 @@ function Sidebar({ color, image, routes }) {
                 alt="..."
               />
             </div>
-          </a>
-          <p>RestuRater</p>
+          </a> */}
+          {/* <p>RestuRater</p> */}
           
         </div>
         <Nav>

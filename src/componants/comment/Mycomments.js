@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import FormModal from './FormModal';
-import UpdateFormModal from './UpdateFormModal';
+// import UpdateFormModal from './UpdateFormModal';
 // heros team work 
 export class Myreviews extends Component {
 
@@ -15,9 +15,9 @@ export class Myreviews extends Component {
     super(props);
     this.state = {
       reviews: {},
-      apdateComObj: {},
+      // apdateComObj: {},
       displayAddModal: false,
-      displayUpdateModal: false,
+      // displayUpdateModal: false,
       idx:0,
     };
   }
@@ -35,10 +35,10 @@ export class Myreviews extends Component {
       // console.log(axiosResponse.data[0]); 
       this.setState({
         reviews: axiosResponse.data[0],
-
       });
     }).catch(error => alert(error));
     console.log(this.state.reviews)
+    // console.log(reviews)
 
 
   };
@@ -48,15 +48,15 @@ export class Myreviews extends Component {
   }
 
  
-  handelDisplayUpdateModal = (comObject,idx) => {
-    this.setState({
-      displayUpdateModal: !this.state.displayUpdateModal,
-      apdateComObj: comObject,
-      idx:idx
+  // handelDisplayUpdateModal = (comObject,idx) => {
+  //   this.setState({
+  //     displayUpdateModal: !this.state.displayUpdateModal,
+  //     apdateComObj: comObject,
+  //     idx:idx
 
-    });
-    // console.log(this.state.idx)
-  }
+  //   });
+  //   // console.log(this.state.idx)
+  // }
 
  
   handelAddForm = (e) => {
@@ -68,14 +68,12 @@ export class Myreviews extends Component {
       email: this.props.auth0.user.email, 
       rest_name: e.target.restName.value,
       rating_comment: e.target.restComment.value,
-      user_img: e.target.restImage.value,
+      // user_img: e.target.restImage.value,
       userName: this.props.auth0.user.name,
     };
 
     axios.post(`${process.env.REACT_APP_SERVER}/review`, body).then(axiosResponse => {
-      // once we get the new added cat from the server, we are going to push it to our reviews array
-      // console.log(axiosResponse.data);
-      // this.state.reviews.push(axiosResponse.data);
+ 
       this.setState({
         reviews: this.state.reviews
       });
@@ -86,10 +84,10 @@ export class Myreviews extends Component {
 
   handelDelete = (comId) => {
     axios.delete(`${process.env.REACT_APP_SERVER}/review/${comId}`).then(res => {
-      // console.log(res.data);
+
       if (res.data.ok === 1) {
  
-        const tempObj = this.state.reviews.filter(com => com._id !== comId);
+        const tempObj = this.state.reviews.comments.filter(com => com._id !== comId);
         this.setState({
           reviews: tempObj
         });
@@ -97,9 +95,9 @@ export class Myreviews extends Component {
     }).catch(error => alert(error))
   }
 
-  updatereviewsArrOfObjectState = (newreviewsArr) => {
-    this.setState({ cat: newreviewsArr });
-  }
+  // updatereviewsArrOfObjectState = (newreviewsArr) => {
+  //   this.setState({ cat: newreviewsArr });
+  // }
 
   render() {
 
@@ -117,7 +115,7 @@ export class Myreviews extends Component {
           handelDisplayModal={this.handelDisplayModal}
           handelSubmitForm={this.handelAddForm}
         />
-        {
+        {/* {
           this.state.displayUpdateModal &&
           <UpdateFormModal
             show={this.state.displayUpdateModal}
@@ -127,14 +125,14 @@ export class Myreviews extends Component {
             reviewsArr={this.state.reviews}
             idx= {this.state.idx}
           />
-        }
+        } */}
         <br />
         <br />
         {
          
         
         
-          false &&
+         this.state.reviews.comments &&
 
           <Row>
             {
@@ -147,18 +145,21 @@ export class Myreviews extends Component {
                       style={{ width: '18rem' }}
                     >
                       {/* <Card.Img variant="top" src={com.user_img} /> */}
-                      <Card.Body>
-                        <Card.Title>{com.rest_name}</Card.Title>
+                      <Card.Body style={{backgroundColor:"#32657c33"}}>
+                      <Card.Title><h4>{this.props.auth0.user.name}</h4></Card.Title>
+
                         <Card.Text>
-                          {com.rating_comment} 
+                        🍴Restrunt Name : {com.rest_name}
+                        <br></br>
+                        🧾Review : {com.rating_comment} 
                         </Card.Text>
                         <Button variant="outline-danger" onClick={() => this.handelDelete(com._id)}>
                           Delete comment
                         </Button>
                         <br />
-                        <Button variant="outline-dark" onClick={() => this.handelDisplayUpdateModal(com,idx)}>
+                        {/* <Button variant="outline-dark" onClick={() => this.handelDisplayUpdateModal(com,idx)}>
                           Update comment
-                        </Button>
+                        </Button> */}
                       </Card.Body>
                     </Card>
                   </Col>
