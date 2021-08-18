@@ -15,15 +15,15 @@ export class FormModal extends Component {
             <Form onSubmit={(e) => this.props.handelSubmitForm(e)}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Resturant Name</Form.Label>
-                <Form.Control name="catName" type="text" />
+                <Form.Control name="restName" type="text" />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>comment</Form.Label>
-                <Form.Control name="catBreed" type="text"  />
+                <Form.Control name="restComment" type="text"  />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Image</Form.Label>
-                <Form.Control name="catImage" type="text" />
+                <Form.Control name="restImage" type="text" />
               </Form.Group>
               <Button variant="primary" type="submit">
                 Add comment

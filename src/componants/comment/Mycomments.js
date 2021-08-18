@@ -23,22 +23,22 @@ export class Myreviews extends Component {
   }
 
   
-  componentDidMount =  async () => {
+  componentDidMount = () => {
     
     const userEmail = this.props.auth0.user.email;
-    let axiosdata = await axios.get(`${process.env.REACT_APP_SERVER}/reviews?email=${userEmail}`)
-    this.setState({
-          reviews: axiosdata.data[0],
-        });
+    // let axiosdata = await axios.get(`${process.env.REACT_APP_SERVER}/reviews?email=${userEmail}`)
+    // this.setState({
+    //       reviews: axiosdata.data[0],
+    //     });
 
-    // axios.get(`${process.env.REACT_APP_SERVER}/reviews?email=${userEmail}`).then((axiosResponse) => { 
-    //   // console.log(axiosResponse.data[0]); 
-    //   this.setState({
-    //     reviews: axiosResponse.data[0],
+    axios.get(`${process.env.REACT_APP_SERVER}/reviews?email=${userEmail}`).then((axiosResponse) => { 
+      // console.log(axiosResponse.data[0]); 
+      this.setState({
+        reviews: axiosResponse.data[0],
 
-    //   });
-    // }).catch(error => alert(error));
-    // console.log(this.state.reviews)
+      });
+    }).catch(error => alert(error));
+    console.log(this.state.reviews)
 
 
   };
@@ -66,9 +66,9 @@ export class Myreviews extends Component {
 
     const body = {
       email: this.props.auth0.user.email, 
-      rest_name: e.target.catName.value,
-      rating_comment: e.target.catBreed.value,
-      user_img: e.target.catImage.value,
+      rest_name: e.target.restName.value,
+      rating_comment: e.target.restComment.value,
+      user_img: e.target.restImage.value,
       userName: this.props.auth0.user.name,
     };
 
@@ -115,7 +115,7 @@ export class Myreviews extends Component {
         <FormModal
           show={this.state.displayAddModal}
           handelDisplayModal={this.handelDisplayModal}
-          handelSubmitForm={this.handelAddCatForm}
+          handelSubmitForm={this.handelAddForm}
         />
         {
           this.state.displayUpdateModal &&
@@ -134,7 +134,7 @@ export class Myreviews extends Component {
          
         
         
-          // this.state.reviews.comments.length &&
+          false &&
 
           <Row>
             {
