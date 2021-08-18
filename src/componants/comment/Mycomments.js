@@ -27,7 +27,7 @@ export class Myreviews extends Component {
     
     const userEmail = this.props.auth0.user.email;
     axios.get(`${process.env.REACT_APP_SERVER}/reviews?email=${userEmail}`).then((axiosResponse) => { 
-      console.log('test' + axiosResponse.data); 
+      console.log('test' + axiosResponse.data[0]); 
       this.setState({
         reviews: axiosResponse.data
       });
