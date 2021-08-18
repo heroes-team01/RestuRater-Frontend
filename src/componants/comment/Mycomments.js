@@ -73,11 +73,10 @@ export class Myreviews extends Component {
     };
 
     axios.post(`${process.env.REACT_APP_SERVER}/review`, body).then(axiosResponse => {
-      // once we get the new added cat from the server, we are going to push it to our reviews array
-      // console.log(axiosResponse.data);
-      // this.state.reviews.push(axiosResponse.data);
+      let newArray = axiosResponse.data
       this.setState({
-        reviews: this.state.reviews
+        reviews: newArray
+
       });
     }).catch(error => alert(error));
   }
@@ -89,7 +88,7 @@ export class Myreviews extends Component {
       // console.log(res.data);
       if (res.data.ok === 1) {
  
-        const tempObj = this.state.reviews.filter(com => com._id !== comId);
+        const tempObj = this.state.reviews.comments.filter(com => com._id !== comId);
         this.setState({
           reviews: tempObj
         });
@@ -128,13 +127,12 @@ export class Myreviews extends Component {
             idx= {this.state.idx}
           />
         }
-        <br />
-        <br />
+;
         {
          
         
         
-          false &&
+         this.state.reviews.comments &&
 
           <Row>
             {
