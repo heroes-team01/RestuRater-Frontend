@@ -14,7 +14,7 @@ export class Myreviews extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      reviews: [],
+      reviews: {},
       apdateComObj: {},
       displayAddModal: false,
       displayUpdateModal: false,
@@ -23,18 +23,25 @@ export class Myreviews extends Component {
   }
 
   
-  componentDidMount = () => {
+  componentDidMount =  async () => {
     
     const userEmail = this.props.auth0.user.email;
-    axios.get(`${process.env.REACT_APP_SERVER}/reviews?email=${userEmail}`).then((axiosResponse) => { 
-      console.log('test' + axiosResponse.data); 
-      this.setState({
-        reviews: axiosResponse.data
-      });
-    }).catch(error => alert(error));
-    console.log('reviews' + this.state.reviews)
-  };
+    let axiosdata = await axios.get(`${process.env.REACT_APP_SERVER}/reviews?email=${userEmail}`)
+    this.setState({
+          reviews: axiosdata.data[0],
+        });
 
+    // axios.get(`${process.env.REACT_APP_SERVER}/reviews?email=${userEmail}`).then((axiosResponse) => { 
+    //   // console.log(axiosResponse.data[0]); 
+    //   this.setState({
+    //     reviews: axiosResponse.data[0],
+
+    //   });
+    // }).catch(error => alert(error));
+    // console.log(this.state.reviews)
+
+
+  };
 
   handelDisplayModal = () => {
     this.setState({ displayAddModal: !this.state.displayAddModal });
@@ -62,12 +69,13 @@ export class Myreviews extends Component {
       rest_name: e.target.catName.value,
       rating_comment: e.target.catBreed.value,
       user_img: e.target.catImage.value,
+      userName: this.props.auth0.user.name,
     };
 
     axios.post(`${process.env.REACT_APP_SERVER}/review`, body).then(axiosResponse => {
       // once we get the new added cat from the server, we are going to push it to our reviews array
       // console.log(axiosResponse.data);
-      this.state.reviews.push(axiosResponse.data);
+      // this.state.reviews.push(axiosResponse.data);
       this.setState({
         reviews: this.state.reviews
       });
@@ -94,6 +102,8 @@ export class Myreviews extends Component {
   }
 
   render() {
+
+      console.log(this.state.reviews);
     return (
       <>
         <br />
@@ -121,16 +131,22 @@ export class Myreviews extends Component {
         <br />
         <br />
         {
-          this.state.reviews.length &&
+         
+        
+        
+          // this.state.reviews.comments.length &&
+
           <Row>
             {
-              this.state.reviews.map((com, idx) => {
+              
+              this.state.reviews.comments.map((com, idx) => {
+                console.log(this.state.reviews);
                 return (
                   <Col md={4} key={idx}>
                     <Card
                       style={{ width: '18rem' }}
                     >
-                      <Card.Img variant="top" src={com.user_img} />
+                      {/* <Card.Img variant="top" src={com.user_img} /> */}
                       <Card.Body>
                         <Card.Title>{com.rest_name}</Card.Title>
                         <Card.Text>
