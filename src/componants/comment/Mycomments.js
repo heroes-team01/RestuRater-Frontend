@@ -73,9 +73,10 @@ export class Myreviews extends Component {
     };
 
     axios.post(`${process.env.REACT_APP_SERVER}/review`, body).then(axiosResponse => {
- 
+      let newArray = axiosResponse.data
       this.setState({
-        reviews: this.state.reviews
+        reviews: newArray
+
       });
     }).catch(error => alert(error));
   }
@@ -115,7 +116,7 @@ export class Myreviews extends Component {
           handelDisplayModal={this.handelDisplayModal}
           handelSubmitForm={this.handelAddForm}
         />
-        {/* {
+        {
           this.state.displayUpdateModal &&
           <UpdateFormModal
             show={this.state.displayUpdateModal}
@@ -125,9 +126,8 @@ export class Myreviews extends Component {
             reviewsArr={this.state.reviews}
             idx= {this.state.idx}
           />
-        } */}
-        <br />
-        <br />
+        }
+;
         {
          
         
@@ -144,7 +144,7 @@ export class Myreviews extends Component {
                     <Card
                       style={{ width: '18rem' }}
                     >
-                      {/* <Card.Img variant="top" src={com.user_img} /> */}
+                     <Card.Img variant="top" src={com.user_img} /> 
                       <Card.Body style={{backgroundColor:"#32657c33"}}>
                       <Card.Title><h4>{this.props.auth0.user.name}</h4></Card.Title>
 
@@ -157,9 +157,9 @@ export class Myreviews extends Component {
                           Delete comment
                         </Button>
                         <br />
-                        {/* <Button variant="outline-dark" onClick={() => this.handelDisplayUpdateModal(com,idx)}>
+                      <Button variant="outline-dark" onClick={() => this.handelDisplayUpdateModal(com,idx)}>
                           Update comment
-                        </Button> */}
+                        </Button> 
                       </Card.Body>
                     </Card>
                   </Col>
