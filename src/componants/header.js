@@ -31,7 +31,7 @@ const Array=['hebaalmomani1998@gmail.com','raghadalboriny@gmail.com','Amneh99el@
 
               }
                
-<a href="../Aboutus/Cards/Cardtest" class="bar-item ">About us</a>
+<a href="./Cardtest" class="bar-item ">About us</a>
               </div>
             </nav>
     </header>

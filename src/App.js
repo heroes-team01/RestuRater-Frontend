@@ -8,12 +8,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import rest from './componants/Restrunt.json';
 import Main from "./componants/Main";
 import Home from "./componants/home/home";
-import Cardtest from './componants/Aboutus/Cards/Cardtest';
+import Cardtest from './componants/Cardtest';
 import ModelCard from "./componants/model";
 import Profile from  "./componants/profile";
 import { withAuth0 } from '@auth0/auth0-react';
 import Dashboard from './componants/dashboard/layouts/Admin'
 
+// import Profile11 from './Screens/Profile';
 // import axios from 'axios
 class App extends React.Component {
 
@@ -79,7 +80,6 @@ class App extends React.Component {
           <Route path='/admin'>
           <Dashboard/>
           </Route>
-
           <Route path='/'>
           <Home/>
           </Route>
@@ -100,3 +100,22 @@ class App extends React.Component {
 }
 
 export default withAuth0(App);
+
+
+//   render() {
+//     const { isAuthenticated } = this.props.auth0;
+//     return (
+//       <>
+//         {/* <Header /> */}
+//         <Router>
+//           <Switch>
+//             <Route exact path="/">
+//               {isAuthenticated ? <Profile /> : <Welcome />}
+//             </Route>
+//           </Switch>
+//         </Router>
+//       </>
+//     )
+//   }
+// }
+
