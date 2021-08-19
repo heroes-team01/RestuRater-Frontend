@@ -20,6 +20,8 @@ body > .navbar-collapse{
         width: 260px;
         z-index: 4;
         padding-bottom: 100px;
+        background-color: #32657ce1
+        ;
     }
 
     .sidebar-background{
@@ -96,10 +98,11 @@ body > .navbar-collapse{
                 }
 
                 p{
-                    color: #000000;
+                    color: whitesmoke;
+                    font-size: 15px;
                     margin: 0;
                     line-height: 31px;
-                    font-size: 12px;
+                    font-size: 15px;
                     font-weight: 600;
                     text-transform: uppercase;
                     display: inline-flex;

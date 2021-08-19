@@ -19,10 +19,11 @@ import React from "react";
 import { useLocation, Route, Switch } from "react-router-dom";
 
 import AdminNavbar from "../components/Navbars/AdminNavbar";
-import Footer from "../components/Footer/Footer";
+// import Footer from "../components/Footer/Footer";
+import Header from "../../header";
 import Sidebar from "../components/Sidebar/Sidebar";
 // import FixedPlugin from "/home/mahmoudabubaker/Project/resturater/src/componants/dashboard/components/FixedPlugin/FixedPlugin.js";
-
+import Footer from "../../footer"
 import routes from "../routes";
 
 import sidebarImage from "../_HYHtD8F.jpg";
@@ -63,6 +64,7 @@ function Admin() {
   }, [location]);
   return (
     <>
+         <Header />
       <div className="wrapper">
         <Sidebar color={color} image={hasImage ? image : ""} routes={routes} />
         <div className="main-panel" ref={mainPanel}>
@@ -70,9 +72,9 @@ function Admin() {
           <div className="content">
             <Switch>{getRoutes(routes)}</Switch>
           </div>
-          <Footer />
         </div>
       </div>
+      <Footer />
       {/* <FixedPlugin
         hasImage={hasImage}
         setHasImage={() => setHasImage(!hasImage)}

@@ -49,6 +49,7 @@ export class MyComment extends Component {
       email: this.props.auth0.user.email, 
       res_name: e.target.restName.value,
       review: e.target.review.value,
+      
     };
 
     axios.post(`${process.env.REACT_APP_SERVER}/com`, body).then(axiosResponse => {
@@ -109,12 +110,14 @@ export class MyComment extends Component {
                 return (
                   <Col md={4} key={idx}>
                     <Card
-                      style={{ width: '18rem' }}
+                      style={{ width: '18rem', backgroundColor:"#32657c33" }}
                     >
-                      <Card.Body>
-                        <Card.Title>{com.res_name}</Card.Title>
+                      <Card.Body >
+                        <Card.Title>  <h4>{this.props.auth0.user.name}</h4></Card.Title>
                         <Card.Text>
-                          {com.review} 
+                        🍴Restrunt Name : {com.res_name}
+                        <br></br>
+                        🧾Review :  {com.review} 
                         </Card.Text>
                         <Button variant="outline-danger" onClick={() => this.handelDeleteCom(com._id)}>
                           Delete Comment

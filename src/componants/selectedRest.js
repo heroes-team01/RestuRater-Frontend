@@ -31,8 +31,8 @@ class FormF extends  React.Component{
 
 
                     <Form.Group aria-label="Default select example">
-                        <Form.Label className='para'>Choose type of Restrunt you want:</Form.Label>
-                        <Form.Control className='formColor' as='select' onChange={this.dataFilter}>
+                        <Form.Label className='para' style={{ fontFamily: "'Courgette', cursive"}} >Choose type of Restrunt you want:</Form.Label>
+                        <Form.Control className='formColor' as='select' onChange={this.dataFilter} style={{ backgroundColor :"#32657c33"}} >
                         <option>All</option>
                         <option value="1">Asian</option>
                         <option value="2">Italian</option>
