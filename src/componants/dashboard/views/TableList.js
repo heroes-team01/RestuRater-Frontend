@@ -1,114 +1,154 @@
-import React, { Component } from 'react'
+import React from "react";
+// import Restrunt from '../../Restrunt.json';
 import axios from "axios";
+import Modal from 'react-bootstrap/Modal';
+import Form from 'react-bootstrap/Form';
 
+// react-bootstrap components
 import {
+  Badge,
+  Button,
   Card,
+  Navbar,
+  Nav,
   Table,
   Container,
   Row,
   Col,
 } from "react-bootstrap";
-import { Button } from "react-bootstrap";
-import Restrunt from '../../Restrunt.json';
-// import { react } from "@babel/types";
-import AddForm from './AddForm';
 
+export class TableList extends React.Component {
 
-export class TableList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      restArry: [],
+    }
 
-    constructor(props) {
-      super(props);
-      this.state = {
-        Restrunts: [],
-        displayAddModal: false
-  
-      };
+    let handelRest = () => {
+      axios.get('http://localhost:4997/allrest').then(res => {
+        console.log(res.data);
 
-  let handelDeleteRest = (serverId) => {
-    axios.delete(`https://http//localhost:4999/allresturant/${serverId}`).then(res => {
-      if (res.data.ok === 1) {
-        const tempRestObj = this.state.Restrunts.filter(cat => cat._id !== serverId);
         this.setState({
-          Restrunts: tempRestObj
+          restArry: res.data,
+
         });
-      }
+
+      }).catch(error => console.log(error))
+    };
+    handelRest()
+
+  }
+
+  handelDeleteRest = (restId) => {
+
+    console.log(restId);
+    axios.delete(`http://localhost:4997/deleteRest/${restId}`).then(res => {
+
+
     }).catch(error => alert(error))
   }
 
-  let handelDisplayModal = () => {
-    this.setState({ 
-      displayModal: !this.state.displayAddModal });
+  addRest = (e) => {
+    e.preventDefault()
+    let dataRest = {
+      title: e.target.title.value,
+      address: e.target.address.value,
+      description: e.target.description.value,
+      image_url: e.target.image_url.value,
+      type: e.target.type.value
+
+    }
+
+    axios.post(`http://localhost:4997/addrest/`, dataRest).then(res => {
+
+      console.log(res);
+    }).catch(error => alert(error))
   }
+  // http://localhost:4997/deleteRest/611d70cd618c4a108e322812
 
- let handelAddForm = (e) => {
+  render() {
 
-    e.preventDefault();
-    this.handelDisplayModal();
-  
 
-    // const body = {
-    //   email: this.props.auth0.user.email, // we are getting the email of the user from auth0
-    //   title: e.target.title.value,
-    //   address: e.target.address.value,
-    //   description: e.target.description.value,
-    //   image_url: e.target.image_url.value,
-    // };
-  };
-
-  return (
-    <>
-
-<AddForm
-          show={this.state.displayAddModal}
-          handelDisplayModal={handelDisplayModal}
-          handelSubmitForm={handelAddForm}
-        />
-        
-      <Container fluid>
-        <Row>
-          <Col md="12">
-            <Card className="strpied-tabled-with-hover">
-              <Card.Header>
-                <Card.Title as="h4">Restaurants List</Card.Title>
-                <Button className='info'  variant="primary">Add Restaurants</Button>
-
-              </Card.Header>
-              <Card.Body className="table-full-width table-responsive px-0">
-                <Table className="table-hover table-striped">
-                  <thead>
-                    <tr>
-                      <th className="border-0">title</th>
-                      <th className="border-0">address</th>
-                      <th className="border-0">description</th>
-                      <th className="border-0">type</th>
-                      <th className="border-0">Buttom</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {Restrunt.map(value => {
-                      return (<tr>
-                        <td>{value.title}</td>
-                        <td>{value.address}</td>
-                        <td>{value.description}</td>
-                        <td>{value.type}</td>
-                        <td><Button variant="outline-danger" onClick={() => handelDeleteRest(Restrunt._id)}>Delete</Button></td>
+    return (
+      <>
+        <Container fluid>
+          <Row>
+            <Col md="12">
+              <Card className="strpied-tabled-with-hover">
+                <Card.Header>
+                  <Card.Title as="h4">Restaurants List</Card.Title>
+                </Card.Header>
+                <Card.Body className="table-full-width table-responsive px-0">
+                  <Table className="table-hover table-striped">
+                    <thead>
+                      <tr>
+                        <th className="border-0">title</th>
+                        <th className="border-0">address</th>
+                        <th className="border-0">description</th>
+                        <th className="border-0">type</th>
+                        <th className="border-0">Buttom</th>
                       </tr>
-                      )
-                    })}
+                    </thead>
+                    <tbody>
 
-                  </tbody>
+                      {
 
-                </Table>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
+                        this.state.restArry.map(value => {
+                          return (<tr>
+                            <td>{value.title}</td>
+                            <td>{value.address}</td>
+                            <td>{value.description}</td>
+                            <td>{value.type}</td>
+                            <td><Button variant="outline-danger" onClick={() => this.handelDeleteRest(value._id)}>Delete</Button></td>
+                          </tr>
+                          )
+                        })}
+                    </tbody>
+                  </Table>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
+        <>
 
-      
-    </>
+          <Card bg="dark" text="back" style={{ width: '100%' , textAlign: 'center'} }>
+            <Card.Header>Add Restaurant</Card.Header>
+            <Card.Body>
+              <Form onSubmit={(e) => this.addRest(e)}>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Label>Restaurant Name</Form.Label>
+                  <Form.Control name="title" type="text" placeholder="Enter the Restaurant name" />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Label>Adress</Form.Label>
+                  <Form.Control name="address" type="text" placeholder="Enter the Restaurant Adress" />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Label>Description</Form.Label>
+                  <Form.Control name="description" type="text" placeholder="Enter the Restaurant Description" />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Label>Restaurant Image</Form.Label>
+                  <Form.Control name="image_url" type="text" placeholder="Enter the image URL" />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Label>Type</Form.Label>
+                  <Form.Control name="type" type="text" placeholder="Enter the type of restaurant" />
+                </Form.Group>
+                <Button variant="primary" type="submit" >
+                  Add Restaurant
+                </Button>
+              </Form>
+
+            </Card.Body>
+          </Card>
+          <br />
+        </>
+      </>
     );
-}
   }
+}
 
 export default TableList;
