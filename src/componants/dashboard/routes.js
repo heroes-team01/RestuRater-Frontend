@@ -17,7 +17,7 @@
 */
 import Dashboard from "./views/Dashboard.js";
 import TableList from "./views/TableList.js";
-import Typography from "./views/Typography.js";
+// import Typography from "./views/Typography.js";
 
 const dashboardRoutes = [
   {
@@ -34,13 +34,13 @@ const dashboardRoutes = [
     component: TableList,
     layout: "/admin",
   },
-  {
-    path: "/typography",
-    name: "Typography",
-    icon: "nc-icon nc-paper-2",
-    component: Typography,
-    layout: "/admin",
-  }
+  // {
+  //   path: "/typography",
+  //   name: "Typography",
+  //   icon: "nc-icon nc-paper-2",
+  //   component: Typography,
+  //   layout: "/admin",
+  // }
 ];
 
 export default dashboardRoutes;
