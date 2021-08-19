@@ -5,6 +5,7 @@ import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Myreviews from "./comment/Mycomments";
 import Footer from './footer';
+import Profile11 from '../Screens/Profile';
 
 class Profile extends Component {
   render() {
@@ -24,8 +25,8 @@ class Profile extends Component {
   </Card.Body>
 </Card>
 
-<Myreviews />
-
+{/* <Myreviews /> */}
+<Profile11 />
 
 <Footer />
         </div>
