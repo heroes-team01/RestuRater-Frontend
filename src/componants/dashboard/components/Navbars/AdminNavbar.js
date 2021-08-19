@@ -131,8 +131,8 @@ function Header() {
                 href="#pablo"
                 onClick={(e) => e.preventDefault()}
               >
-                {/* <i className="nc-icon nc-zoom-split"></i> */}
-                {/* <span className="d-lg-block"> Search</span> */}
+                <i className="nc-icon nc-zoom-split"></i>
+                <span className="d-lg-block"> Search</span>
               </Nav.Link>
             </Nav.Item>
           </Nav>
@@ -143,7 +143,7 @@ function Header() {
                 href="#pablo"
                 onClick={(e) => e.preventDefault()}
               >
-                <span className="no-icon">Home</span>
+                <span className="no-icon">Account</span>
               </Nav.Link>
             </Nav.Item> */}
             {/* <Dropdown as={Nav.Item}>
